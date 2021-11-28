@@ -23,7 +23,7 @@ public class Garage {
 			System.out.printf("Current charges: $%.2f, Total receipts: $%.2f%n", fee, totalReceipts);
 
 			// read in the next customer's hours
-			System.out.print("Enter number of hours (-1 to quit):");
+			System.out.print("Enter number of hours (-1 to quit): ");
 			hours = input.nextDouble();
 		}
 	}
@@ -34,7 +34,13 @@ public class Garage {
 		double charge = 2.0;
 
 		// add extra fees as applicable
-
+		// .50 per hour above 3 maximum charge $10
+		// add each customer's total to totalReceipts
+		if (hours > 10) {
+			charge = 10.0;
+		} else if (hours > 3) {
+			charge = charge + (hours - 3) * .50;
+		}
 		// apply maximum charge if needed
 
 		return charge;
