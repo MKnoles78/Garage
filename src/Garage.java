@@ -1,4 +1,5 @@
 
+//Author: Mike Knoles, PA 3.7
 //Exercise 6.8 Solution: Garage.java
 //Program calculates charges for parking
 import java.util.Scanner;
